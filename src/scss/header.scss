@@ -1,8 +1,12 @@
+
+//====================================================================================================
+
 .page {
 
 
 	&__header {
 		padding: 25px 0px 25px 0px;
+		min-height:60px ;
 	}
 }
 .header {
@@ -45,7 +49,7 @@
 
 	display: flex;
 
-	&__nav {
+	&__body {
 	}
 
 	&__list {
@@ -70,4 +74,60 @@
 .btn-googleplay {
 }
 .btn-apstore {
+}
+
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		right: 0;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
 }
