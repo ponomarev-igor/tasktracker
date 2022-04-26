@@ -1,14 +1,22 @@
 
 
-// @media (max-width:$mobile) {
-	
+//====================================================================================================
+@media (max-width:1110px) {
+  .menu__item:not(:last-child){
+    @include adaptiveValue(margin-right, 30,5);
+  }
 
-// 	.menu__list{
-// 		display: flex;
-// 		align-items: center;
-// 		flex-direction: column;
-		
-// 	}
+  .menu__link{
+    @include adaptiveValue(font-size,14 ,24,);
+    
+  }
+  .logo__text{
+    @include adaptiveValue(font-size,14 ,24,);
+    
+  }
+  
+}
+//====================================================================================================
 // .menu__body{
 
 // 	position: fixed;

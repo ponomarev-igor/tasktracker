@@ -1,17 +1,17 @@
 //====================================================================================================
 .footer {
-background-color: $footerbg;
+  background-color: $footerbg;
   &__container {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  &__body {
-    display: flex;
-    color: $textgray;
-    justify-content: space-between;
-    align-items: center;
-  }
+
 
   &__text {
+    color: $textgray;
   }
 
   &__social {

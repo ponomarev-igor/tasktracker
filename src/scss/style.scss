@@ -140,9 +140,10 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
+@import "about";
 
 // Подключение стилей переменных и медиа запросов
 
-@import "media-queries"
+@import "media-queries";
 
 
