@@ -14,7 +14,11 @@
 		display: flex;
 		align-items: center;
 		margin-right: rem(40);
-		
+		&:hover{
+			color: #8C30F5;
+			transition: all 0.7s ease-in-out;
+			
+		}
 	}
 
 	&__menu {
@@ -22,9 +26,11 @@
 
 	&__button {
 		margin-left: auto;
+		display: none;
 	}
 }
 .container {
+	
 }
 .logo {
 	display: flex;
@@ -32,17 +38,19 @@
 	justify-content: center;
 	&__text {
 	font-family: 'Raleway';
-	font-weight: 900;
+	font-weight: 900 ;
 	line-height: calc(20 / 14 * 100%);
 	padding-left: rem(5);
 
 	}
 }
 .menu {
+	
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	&__body {
+
 	
 	}
 
@@ -61,8 +69,13 @@
 	&__link {
 		color: $mainColor;
 		font-family: 'Manrope';
-		font-weight: 700;
+		font-weight: 600;
 		line-height: calc(20 / 14 * 100%);
+		
+		&:hover{
+			color: #8C30F5;
+			transition: all 1s ease-in-out;
+		}
 	}
 }
 .btn-googleplay {
@@ -73,38 +86,93 @@
 //====================================================================================================
 
 //Burger
+	@media (max-width:$mobile) {
 
-// .icon-menu {
-// 	display: none;
-// 	@media (max-width: $mobile) {
-// 		display: block;
-// 		position: relative;
-// 		right: 0;
-// 		width: rem(30);
-// 		height: rem(18);
-// 		cursor: pointer;
-// 		z-index: 5;
-// 		span,
-// 		&::before,
-// 		&::after {
-// 			content: "";
-// 			transition: all 0.3s ease 0s;
-// 			right: 0;
-// 			position: absolute;
-// 			width: 100%;
-// 			height: rem(2);
-// 			background-color: #000;
-// 		}
-// 		&::before {
-// 			top: 0;
-// 		}
-// 		&::after {
-// 			bottom: 0;
-// 		}
-// 		span {
+	.icon-menu{
+		display: block;
+		position: relative;
+		// background-color: #8C30F5;
+		right: 0;
+		width: rem(40);
+		height: rem(25);
+		z-index: 5;
+		cursor: pointer;
+		span,
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			width:	100%;
+			height:rem(2);
+			background-color: #000;
+			right:  0;
+
+		}
+		&::before{
+			top: 0;
+		}
+		&::after{
+			bottom: 0;
+		}
+
+		span {
 			
-// 			top: calc(50% - rem(1));
-// 		}
+					top: 50%;
+					transform: scale(1) translate(0px, -50%);
+				}	
+	}
+.menu__body{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.6);
+	padding:100px 30px 30px 30px;
+	overflow: auto;
+
+}
+.menu__list{
+	flex-direction: column;
+}
+.menu__item{
+	
+		margin-bottom: 50px;
+	
+
+}
+	}
+	// @media (max-width: $mobile) {
+	// 	.icon-menu{
+	// 	display: block;
+	// 	position: relative;
+	// 	right: 0;
+	// 	width: rem(30);
+	// 	height: rem(18);
+	// 	cursor: pointer;
+	// 	z-index: 5;
+	// 	span,
+	// 	&::before,
+	// 	&::after {
+	// 		content: "";
+	// 		transition: all 0.3s ease 0s;
+	// 		right: 0;
+	// 		position: absolute;
+	// 		width: 100%;
+	// 		height: rem(2);
+	// 		background-color: #000;
+	// 	}
+	// 	&::before {
+	// 		top: 0;
+	// 	}
+	// 	&::after {
+	// 		bottom: 0;
+	// 	}
+	// 	span {
+			
+	// 		top: calc(50% - rem(1));
+	// 	}
+	// }}
 // 		.menu-open & {
 // 			span {
 // 				width: 0;

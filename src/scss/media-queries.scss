@@ -5,17 +5,40 @@
   .menu__item:not(:last-child){
     @include adaptiveValue(margin-right, 30,5);
   }
-
   .menu__link{
-    @include adaptiveValue(font-size,14 ,24,);
+    @include adaptiveValue(font-size,14 ,24);
     
   }
+
   .logo__text{
-    @include adaptiveValue(font-size,14 ,24,);
+    @include adaptiveValue(font-size,14 ,24);
     
   }
   
 }
+@media (min-width:1440px) {
+  .menu__link,
+  .logo__text{
+    font-size: calc(8px + 6 * ((100vw - 320px)/(1440 - 320)));
+    padding-left: 3px;
+  }
+  .menu__item:not(:last-child){
+    margin-right: calc(5px + 7 * ((100vw - 320px)/(1440 - 320)));
+  }
+  .header__button img{
+    width: 140px;
+    height: 150px;
+  }
+  .header__logo{
+    margin-right: calc(35px + (40 - 35) * ((100vw - 320px)/(1440 - 320)));;
+  }
+
+  .about{
+    margin-bottom: 200px;
+  }
+  
+}
+
 //====================================================================================================
 // .menu__body{
 
