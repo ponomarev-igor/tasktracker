@@ -9,6 +9,7 @@ import { isMobile, menuClose, getHash, FLS } from "../functions.js";
 export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
 	const targetBlockElement = document.querySelector(targetBlock);
 	if (targetBlockElement) {
+
 		let headerItem = '';
 		let headerItemHeight = 0;
 		if (noHeader) {
@@ -23,9 +24,10 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 			easing: 'easeOutQuad',
 		};
 		// Закрываем меню, если оно открыто
-		document.documentElement.classList.contains("menu-open") ? menuClose() : null;
+		document.documentElement.classList.contains("_active") ? menuClose() : null;
 
 		if (typeof SmoothScroll !== 'undefined') {
+
 			// Прокрутка с использованием дополнения
 			new SmoothScroll().animateScroll(targetBlockElement, '', options);
 		} else {
@@ -37,6 +39,7 @@ export let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 
 				top: targetBlockElementPosition,
 				behavior: "smooth"
 			});
+
 		}
 		FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
 	} else {
