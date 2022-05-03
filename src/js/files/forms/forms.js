@@ -207,7 +207,7 @@ export function formSubmit(options = { validate: true }) {
 				form: form
 			}
 		}));
-		// Показываем попап, если подключен модуль попапов 
+		// Показываем попап, если подключен модуль попапов
 		// и для формы указана настройка
 		setTimeout(() => {
 			if (flsModules.popup) {
@@ -274,7 +274,7 @@ export function formRating() {
 			const ratingActiveWidth = index / 0.05;
 			ratingActive.style.width = `${ratingActiveWidth}%`;
 		}
-		// Возможность указать оценку 
+		// Возможность указать оценку
 		function setRating(rating) {
 			const ratingItems = rating.querySelectorAll('.rating__item');
 			for (let index = 0; index < ratingItems.length; index++) {

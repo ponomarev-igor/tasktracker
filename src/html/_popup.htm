@@ -1,10 +1,111 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
+<div id="popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">x</button>
+      <div class="popup__form form">
+        <form action="#" id="form" class="form__body">
+          <h1 class="form__title">Отправка данных на почту</h1>
+          <div class="form__item">
+            <label for="formName" class="form__label"> Имя*:</label>
+            <input
+              type="text"
+              name="name"
+              id="formName"
+              class="form__input _req"
+            />
+          </div>
+          <div class="form__item">
+            <label for="formEmail" class="form__label"> E-mail*:</label>
+            <input
+              type="text"
+              name="name"
+              id="formEmail"
+              class="form__input _req _email"
+            />
+          </div>
+          <div class="form__item">
+            <div class="form__label">Адаптивная или Отзывчивая</div>
+            <div class="options">
+              <div class="options__item">
+                <input
+                  id="formAdaptiveLoyout"
+                  type="radio"
+                  name="layout"
+                  class="options__input"
+                  value="adaptive"
+                  checked
+                />
+                <label for="formAdaptiveLoyout" class="options__label"
+                  ><span>Адаптивная</span>
+                </label>
+              </div>
+              <div class="options__item">
+                <input
+                  id="formResponsiveLoyout"
+                  type="radio"
+                  name="layout"
+                  class="options__input"
+                  value="resposive"
+                />
+                <label for="formResponsiveLoyout" class="options__label"
+                  ><span>Отзывчивая</span></label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <label for="forMessage" class="form__label">Сообщение</label>
+            <textarea
+              name="message"
+              id="forMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Время на выполнения заказа:</div>
+            <select name="time" class="select">
+              <option value="За один день">Очень срочно</option>
+              <option value=" за три дня" selected>Срочно</option>
+              <option value="за неделю">Время еще есть</option>
+              <option value=" в течении месяца">Неторопимся</option>
+            </select>
+          </div>
+          <div class="form__item">
+            <div class="form__label">Прикрепить скриншот макета*</div>
+            <div class="file">
+              <div class="file__item">
+                <input
+                  accept=".jpg, .png, .gif"
+                  type="file"
+                  name="image"
+                  id="formImage"
+                  class="file__input"
+                />
+                <button type="b" class="file__button">Выбрать</button>
+              </div>
+              <div class="file__preview"></div>
+            </div>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                type="checkbox"
+                name="agreement"
+                id="formAgreement"
+                class="checkbox__input _req"
+                checked
+              />
+              <label class="checkbox__label" for="formAgreement">
+                <span
+                  >Я даю свое согласие на обработку персональных данных в
+                  соответствии с <a href="#">Условиями</a>*
+                </span></label
+              >
+            </div>
+          </div>
+          <button type="submit" class="form__button">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

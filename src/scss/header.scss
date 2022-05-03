@@ -35,9 +35,7 @@
 		display: flex;
 		margin-left: auto;
 		
-		@media (max-width: em(1110)){
-	
-		}
+		
 	}
 }
 .container {
@@ -51,7 +49,7 @@
 	font-family: 'Raleway';
 	font-weight: 900 ;
 	line-height: calc(20 / 14 * 100%);
-	padding-left: rem(5);
+	padding-left: rem(8);
 
 	}
 }
@@ -90,6 +88,7 @@
 	}
 }
 .btn-googleplay {
+	margin-right: 12px;
 }
 .btn-apstore {
 }
