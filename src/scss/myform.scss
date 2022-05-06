@@ -40,10 +40,8 @@
   &__input:focus{
     box-shadow: 0 0 15px #ae6ef3;;
   }
-  &__input{
-    &__error{
-      box-shadow: 0 0 15px #ff0000;
-    }
+  .form__input._form-error{
+    box-shadow: 0 0 15px #ff0000;;
   }
 
   textarea.form__input  {

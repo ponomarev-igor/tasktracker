@@ -3,7 +3,7 @@
     <div class="popup__content">
       <button data-close type="button" class="popup__close">x</button>
       <div class="popup__form form">
-        <form action="#" id="form" class="form__body">
+        <form action="sendmail.php" id="form" class="form__body" method="post">
           <h1 class="form__title">Отправка данных на почту</h1>
           <div class="form__item">
             <label for="formName" class="form__label"> Имя*:</label>
@@ -11,16 +11,28 @@
               type="text"
               name="name"
               id="formName"
-              class="form__input _req"
+              class="form__input"
+              data-required
             />
           </div>
           <div class="form__item">
             <label for="formEmail" class="form__label"> E-mail*:</label>
             <input
-              type="text"
+              type="email"
               name="name"
               id="formEmail"
-              class="form__input _req _email"
+              class="form__input _"
+              data-required
+            />
+          </div>
+          <div class="form__item">
+            <label for="formTel" class="form__label"> Код Региона*:</label>
+            <input
+              type="tel"
+              name="phone"
+              id="formTel"
+              class="form__input _"
+              data-required
             />
           </div>
           <div class="form__item">
@@ -92,7 +104,8 @@
                 type="checkbox"
                 name="agreement"
                 id="formAgreement"
-                class="checkbox__input _req"
+                class="checkbox__input _"
+                data-required
                 checked
               />
               <label class="checkbox__label" for="formAgreement">
