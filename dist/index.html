@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Tasktracker</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220510003855" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="popup" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<button data-close type="button" class="popup__close">
+						<img class="close__cross" src="img/cross-svgrepo-com.svg" alt="" width="20px" />
+					</button>
+					<div class="popup__form form">
+						<form action="#" enctype="multipart/form-data" id="form" class="form__body" method="post">
+							<h1 class="form__title">Отправка данных на почту</h1>
+							<div class="form__item">
+								<label for="formName" class="form__label"> Имя*:</label>
+								<input type="text" name="name" id="formName" class="form__input" data-validate-field="name" />
+							</div>
+							<div class="form__item">
+								<label for="formEmail" class="form__label"> E-mail*:</label>
+								<input type="email" name="email" id="formEmail" class="form__input" data-validate-field="email" />
+							</div>
+							<div class="form__item">
+								<label for="formTel" class="form__label"> Код Региона*:</label>
+								<input type="tel" name="phone" id="formTel" class="form__input" data-validate-field="tel" />
+							</div>
+							<div class="form__item">
+								<div class="form__label">Адаптивная или Отзывчивая</div>
+								<div class="options">
+									<div class="options__item">
+										<input id="formAdaptiveLoyout" type="radio" name="layout" class="options__input" value="adaptive" checked />
+										<label for="formAdaptiveLoyout" class="options__label"><span>Адаптивная</span>
+										</label>
+									</div>
+									<div class="options__item">
+										<input id="formResponsiveLoyout" type="radio" name="layout" class="options__input" value="resposive" />
+										<label for="formResponsiveLoyout" class="options__label"><span>Отзывчивая</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="form__item">
+								<label for="forMessage" class="form__label">Сообщение</label>
+								<textarea name="message" id="forMessage" class="form__input"></textarea>
+							</div>
+							<!-- <div class="form__item">
+            <div class="form__label">Время на выполнения заказа:</div>
+            <select name="time" class="select">
+              <option value="За один день">Очень срочно</option>
+              <option value=" за три дня" selected>Срочно</option>
+              <option value="за неделю">Время еще есть</option>
+              <option value=" в течении месяца">Неторопимся</option>
+            </select>
+          </div> -->
+							<div class="form__item">
+								<div class="form__label">Прикрепить скриншот макета*</div>
+								<div class="file">
+									<div class="file__item">
+										<input accept=".jpg, .png, .gif" type="file" name="file[]" multiple id="myfile" class="file__input" />
+										<button type="button" class="file__button">Выбрать</button>
+									</div>
+									<div class="file__preview"></div>
+								</div>
+							</div>
+							<div class="form__item">
+								<div class="checkbox">
+									<input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _" checked />
+									<label class="checkbox__label" for="formAgreement">
+										<span>Я даю свое согласие на обработку персональных данных в
+											соответствии с <a href="#">Условиями</a>*
+										</span></label>
+								</div>
+							</div>
+							<button type="submit" class="form__button">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="page__header header">
+			<div class="header__container container">
+				<div class="header__logo">
+					<a href="" class="logo"><img src="img/header__logo.svg" alt="" /><span class="logo__text">ТаскТрекер</span>
+					</a>
+				</div>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu">
+						<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="100" onclick="this.classList.toggle('active')">
+							<path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+							<path class="line middle" d="m 30,50 h 40" />
+							<path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+						</svg>
+					</button>
+
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a data-goto=".page__about" href="#" class="menu__link">Приложение</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Возможности</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Стоимость</a>
+							</li>
+							<li class="menu__item">
+								<a data-goto=".news" href="#" class="menu__link">Блог</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__button">
+					<a class="btn-googleplay" href="#"><img src="img/Google Play Badge.svg" alt="" /></a>
+					<a class="btn-apstore" href="#"><img src="img/App Store Badge.svg" alt="" /></a>
+				</div>
+			</div>
+		</header>
+
+		<main class="page__main main">
+			<section class="page__about about" id="about">
+				<div class="about__container container">
+					<div class="about__body">
+						<div class="about__column">
+							<div class="about__text">
+								<h1 class="about__title">Приложение органайзер</h1>
+								<p class="about__subtitle">
+									Контролируй все свои дела и задачи. Не упускай ничего важного.
+									Заметки, даты и напоминания. Все в одном месте.
+								</p>
+							</div>
+							<div class="about__button">
+								<button data-popup="#popup" class="btn">Оставить заявку</button>
+							</div>
+						</div>
+						<div class="about__column --photo">
+							<div class="about__image about__image-ibg">
+								<img src="img/about__Mock Creative.png" alt="Фото приложения" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__text">© 2021 ТаскТрекер. Все права защищены</div>
+				<div class="footer__social social">
+					<ul class="social__list">
+						<li class="social__item">
+							<img src="img/Instagram.svg" alt="" />
+						</li>
+						<li class="social__item">
+							<img src="img/Dribbble.svg" alt="" />
+						</li>
+						<li class="social__item">
+							<img src="img/Twitter.svg" alt="" />
+						</li>
+						<li class="social__item">
+							<img src="img/Youtube.svg" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">
+					<img class="close__cross" src="img/cross-svgrepo-com.svg" alt="" width="20px" />
+				</button>
+				<div class="popup__form form">
+					<form action="#" enctype="multipart/form-data" id="form" class="form__body" method="post">
+						<h1 class="form__title">Отправка данных на почту</h1>
+						<div class="form__item">
+							<label for="formName" class="form__label"> Имя*:</label>
+							<input type="text" name="name" id="formName" class="form__input" data-validate-field="name" />
+						</div>
+						<div class="form__item">
+							<label for="formEmail" class="form__label"> E-mail*:</label>
+							<input type="email" name="email" id="formEmail" class="form__input" data-validate-field="email" />
+						</div>
+						<div class="form__item">
+							<label for="formTel" class="form__label"> Код Региона*:</label>
+							<input type="tel" name="phone" id="formTel" class="form__input" data-validate-field="tel" />
+						</div>
+						<div class="form__item">
+							<div class="form__label">Адаптивная или Отзывчивая</div>
+							<div class="options">
+								<div class="options__item">
+									<input id="formAdaptiveLoyout" type="radio" name="layout" class="options__input" value="adaptive" checked />
+									<label for="formAdaptiveLoyout" class="options__label"><span>Адаптивная</span>
+									</label>
+								</div>
+								<div class="options__item">
+									<input id="formResponsiveLoyout" type="radio" name="layout" class="options__input" value="resposive" />
+									<label for="formResponsiveLoyout" class="options__label"><span>Отзывчивая</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="form__item">
+							<label for="forMessage" class="form__label">Сообщение</label>
+							<textarea name="message" id="forMessage" class="form__input"></textarea>
+						</div>
+						<!-- <div class="form__item">
+            <div class="form__label">Время на выполнения заказа:</div>
+            <select name="time" class="select">
+              <option value="За один день">Очень срочно</option>
+              <option value=" за три дня" selected>Срочно</option>
+              <option value="за неделю">Время еще есть</option>
+              <option value=" в течении месяца">Неторопимся</option>
+            </select>
+          </div> -->
+						<div class="form__item">
+							<div class="form__label">Прикрепить скриншот макета*</div>
+							<div class="file">
+								<div class="file__item">
+									<input accept=".jpg, .png, .gif" type="file" name="file[]" multiple id="myfile" class="file__input" />
+									<button type="button" class="file__button">Выбрать</button>
+								</div>
+								<div class="file__preview"></div>
+							</div>
+						</div>
+						<div class="form__item">
+							<div class="checkbox">
+								<input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _" checked />
+								<label class="checkbox__label" for="formAgreement">
+									<span>Я даю свое согласие на обработку персональных данных в
+										соответствии с <a href="#">Условиями</a>*
+									</span></label>
+							</div>
+						</div>
+						<button type="submit" class="form__button">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220510003855"></script>
+</body>
+
+</html>
