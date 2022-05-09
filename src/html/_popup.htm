@@ -1,9 +1,22 @@
 <div id="popup" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
-      <button data-close type="button" class="popup__close">x</button>
+      <button data-close type="button" class="popup__close">
+        <img
+          class="close__cross"
+          src="../img/cross-svgrepo-com.svg"
+          alt=""
+          width="20px"
+        />
+      </button>
       <div class="popup__form form">
-        <form action="sendmail.php" id="form" class="form__body" method="post">
+        <form
+          action="#"
+          enctype="multipart/form-data"
+          id="form"
+          class="form__body"
+          method="post"
+        >
           <h1 class="form__title">Отправка данных на почту</h1>
           <div class="form__item">
             <label for="formName" class="form__label"> Имя*:</label>
@@ -12,17 +25,17 @@
               name="name"
               id="formName"
               class="form__input"
-              data-required
+              data-validate-field="name"
             />
           </div>
           <div class="form__item">
             <label for="formEmail" class="form__label"> E-mail*:</label>
             <input
               type="email"
-              name="name"
+              name="email"
               id="formEmail"
-              class="form__input _"
-              data-required
+              class="form__input"
+              data-validate-field="email"
             />
           </div>
           <div class="form__item">
@@ -31,8 +44,8 @@
               type="tel"
               name="phone"
               id="formTel"
-              class="form__input _"
-              data-required
+              class="form__input"
+              data-validate-field="tel"
             />
           </div>
           <div class="form__item">
@@ -73,7 +86,7 @@
               class="form__input"
             ></textarea>
           </div>
-          <div class="form__item">
+          <!-- <div class="form__item">
             <div class="form__label">Время на выполнения заказа:</div>
             <select name="time" class="select">
               <option value="За один день">Очень срочно</option>
@@ -81,7 +94,7 @@
               <option value="за неделю">Время еще есть</option>
               <option value=" в течении месяца">Неторопимся</option>
             </select>
-          </div>
+          </div> -->
           <div class="form__item">
             <div class="form__label">Прикрепить скриншот макета*</div>
             <div class="file">
@@ -89,11 +102,12 @@
                 <input
                   accept=".jpg, .png, .gif"
                   type="file"
-                  name="image"
-                  id="formImage"
+                  name="file[]"
+                  multiple
+                  id="myfile"
                   class="file__input"
                 />
-                <button type="b" class="file__button">Выбрать</button>
+                <button type="button" class="file__button">Выбрать</button>
               </div>
               <div class="file__preview"></div>
             </div>
@@ -105,7 +119,6 @@
                 name="agreement"
                 id="formAgreement"
                 class="checkbox__input _"
-                data-required
                 checked
               />
               <label class="checkbox__label" for="formAgreement">

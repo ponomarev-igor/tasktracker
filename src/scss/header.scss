@@ -21,11 +21,7 @@
 		display: flex;
 		align-items: center;
 		margin-right: rem(40);
-		&:hover{
-			color: #8C30F5;
-			transition: all 0.5s ease;
-			
-		}
+	
 	}
 
 	&__menu {
@@ -50,7 +46,14 @@
 	font-weight: 900 ;
 	line-height: calc(20 / 14 * 100%);
 	padding-left: rem(8);
-
+	@media(hover:hover){
+		&:hover{
+			color: #8C30F5;
+			transition: all 0.5s ease;
+			
+		}
+	}
+	
 	}
 }
 .menu {
@@ -81,10 +84,13 @@
 		font-weight: 600;
 		line-height: calc(20 / 14 * 100%);
 		
-		&:hover{
-			color: #8C30F5;
-			transition: all 0.5s ease;
-		}
+		@media(hover:hover){
+			&:hover{
+				color: #8C30F5;
+				transition: all 0.5s ease;
+			}
+			}
+	
 	}
 }
 .btn-googleplay {
@@ -161,43 +167,3 @@
 
 	//====================================================================================================
 	
-
-.header {
-
-		&__container {
-		}
-
-		&__logo {
-		}
-
-		&__menu {
-		}
-
-		&__button {
-		}
-}
-.container {
-}
-.logo {
-
-		&__text {
-		}
-}
-.menu {
-
-		&__body {
-		}
-
-		&__list {
-		}
-
-		&__item {
-		}
-
-		&__link {
-		}
-}
-.btn-googleplay {
-}
-.btn-apstore {
-}

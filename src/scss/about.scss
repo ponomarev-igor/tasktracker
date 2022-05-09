@@ -64,11 +64,13 @@
   padding: 16px 35px 16px 35px;
   color: #FFFFFF;
   cursor: pointer;
- 
+ @media(hover:hover){
   &:hover{
     background: #43068f;
     transition: all 1s ease-in-out;
 
 
   }
+ }
+  
 }

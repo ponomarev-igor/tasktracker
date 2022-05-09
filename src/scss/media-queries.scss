@@ -1,7 +1,11 @@
 
 
 //====================================================================================================
+
+
+
 @media (max-width:1110px) {
+
   .menu__item:not(:last-child){
     @include adaptiveValue(margin-right, 30,5);
   }
